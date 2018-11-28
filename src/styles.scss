@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+$text-color: #333333;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;;
+}
+.w-40 {
+  position: absolute;
+  font-size: 13px;
+  left: 20px;
+  top: 10px;
+  color: $text-color;
+}
+.phone {
+  padding-left: 30px;
+}

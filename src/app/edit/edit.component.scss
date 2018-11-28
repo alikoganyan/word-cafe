@@ -1,0 +1,105 @@
+$text-color: #333333;
+$btn-bgcolor: #F69F2A;
+$btn-color: #fff;
+$search: #48A9EF;
+$danger: #dc3545;
+$address:  #6197D3;
+$font-size: 13px;
+$pdf-color: #929292;
+$left-border-color: #27AE60;
+
+.font-13 {
+  font-size: 13px !important;
+}
+
+.row {
+  margin: 29px 0px  0px 0px!important;
+  .col-4, .col-12 {
+    padding-right: 7px;
+    padding-left: 7px;
+  }
+  .form-control {
+    font-size: 13px !important;
+    color: $text-color;
+  }
+}
+
+.btn {
+  margin-left: 15px !important;
+  font-size: 14px;
+}
+.btn-orange {
+  background-color: $btn-bgcolor;
+  color: $btn-color;
+  &:hover {
+    background: darken($btn-bgcolor, 10%);
+  }
+}
+
+.invalid {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: $danger;
+}
+.search {
+  background: $search;
+  padding: 1px 8px;
+  position: absolute;
+  right: 15px;
+  border-radius: 5px;
+  top: 6px;
+  i {
+    font-size: 12px;
+    color: $btn-color;
+  }
+}
+
+.type {
+  .title {
+    @extend .font-13;
+    color: $text-color;
+    font-weight: 900;
+    font-family: 'Roboto', sans-serif;
+    margin-right: 6px;
+  }
+
+  .pdf {
+    color: $pdf-color;
+    border: 1px solid $pdf-color;
+    border-radius: 5px;
+  }
+}
+
+.city {
+  @extend .font-13;
+  color: $text-color;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 4px;
+}
+
+.address {
+  @extend .font-13;
+  color: $address;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+}
+
+.row-2 {
+  margin: 0px !important;
+  border-left: 6px solid $left-border-color;
+}
+
+.name {
+  font-size: $font-size;
+  font-family: 'Roboto', sans-serif;
+}
+
+.phone {
+  padding-left: 30px;
+}
+
+.pl-1-2 {
+  padding-left: 1.2rem;
+}

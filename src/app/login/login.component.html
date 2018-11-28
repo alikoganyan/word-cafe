@@ -1,0 +1,53 @@
+<div class="container">
+  <form class="row" [formGroup]="profileForm">
+    <div class="col-4 form-group">
+      <input formControlName="lastName" type="text" class="form-control" placeholder="Фамилия">
+    </div>
+    <div class="col-4 form-group">
+      <input formControlName="firstName" type="text" class="form-control" placeholder="Имя">
+      <div *ngIf="profileForm.controls['firstName'].invalid && (profileForm.controls['firstName'].dirty || profileForm.controls['firstName'].touched)"
+           class="invalid">
+        <div *ngIf="profileForm.controls['firstName'].errors.required">
+          Это поле обязательное.
+        </div>
+      </div>
+
+    </div>
+    <div class="col-4 form-group">
+      <input formControlName="middleName" type="text" class="form-control" placeholder="Отчество">
+    </div>
+    <div class="col-12 form-group mb-5">
+      <input formControlName="object" type="text" class="form-control" placeholder="Объект">
+      <label class="search">
+        <i class="fas fa-search"></i>
+      </label>
+    </div>
+    <div class="col-4 form-group">
+      <label class="w-40">+7</label>
+      <input formControlName="phoneNumber" type="text" class="form-control phone">
+    </div>
+    <div class="col-4 form-group">
+      <select  formControlName="city" class="form-control" >
+        <option>Аренда / Продажа</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="col-4 form-group">
+      <select formControlName="admin" class="form-control" >
+        <option>Менеджер</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="col-12 form-group mb-4">
+      <textarea class="form-control" placeholder="Комментарий" rows="4"></textarea>
+    </div>
+
+  </form>
+  <button type="submit" class="btn btn-orange" (click)="getValue(profileForm)">Перейти к выборке</button>
+</div>
